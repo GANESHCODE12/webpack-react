@@ -12,12 +12,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack -- config webpack.config.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "webpack": "webpack serve",
-    "build-webpack": "webpack --mode production"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -38,13 +36,16 @@
     ]
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
     "webpack-cli": "^4.9.2"
   }
 }
